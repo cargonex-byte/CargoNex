@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CargoNex Application</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+
+🚢 CargoNex
+
+</div>
+
+<ul class="menu">
+
+<li><a href="dashboard.html">Dashboard</a></li>
+<li><a href="#">Marketplace</a></li>
+<li><a href="messages.html">Messages</a></li>
+<li><a href="profile.html">Profile</a></li>
+<li><a href="login.html">Logout</a></li>
+
+</ul>
+
+</nav>
+
+<section class="dashboard">
+
+<h1>Apply For Cargo Job</h1>
+
+<form id="applicationForm">
+
+<input
+type="text"
+id="company"
+placeholder="Company Name"
+required>
+
+<input
+type="text"
+id="contact"
+placeholder="Contact Person"
+required>
+
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number"
+required>
+
+<input
+type="number"
+id="price"
+placeholder="Your Service Price"
+required>
+
+<textarea
+id="message"
+placeholder="Tell the cargo owner why they should choose you..."
+required>
+</textarea>
+
+<button type="submit">
+
+Submit Application
+
+</button>
+
+</form>
+
+</section>
+
+<script>
+
+document.getElementById("applicationForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("🎉 Application Submitted Successfully!");
+
+document.getElementById("applicationForm").reset();
+
+});
+
+</script>
+
+</body>
+
+</html>

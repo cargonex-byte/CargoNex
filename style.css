@@ -1,0 +1,330 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+}
+
+nav {
+    background-color: #0a2a43;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    color: #0a2a43;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #444;
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #0a2a43;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1565a7;
+}
+.users {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    width: 250px;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: #0a2a43;
+}
+.users h3 {
+    color: #0a2a43;
+    margin-top: 40px;
+}
+.shipments {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f7fa;
+}
+
+.shipment-card {
+    background-color: white;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+.shipment-card h3 {
+    color: #0a2a43;
+}
+.register {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.register-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.register-card {
+    background-color: #f4f7fa;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.register-card h3 {
+    color: #0a2a43;
+}
+
+.register-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+.hub h2 {
+    color: #0a2a43;
+    margin-bottom: 20px;
+}
+.dashboard {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.dashboard-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.dash-card {
+    background-color: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+}
+
+.dash-card h3 {
+    color: #0a2a43;
+}
+.auth {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.auth input, .auth select {
+    display: block;
+    width: 250px;
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.auth button {
+    width: 270px;
+}s
+.user-box {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.stat-card {
+    background-color: #0a2a43;
+    color: white;
+    padding: 20px;
+    width: 150px;
+    border-radius: 10px;
+}
+#cargoFeed {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+#cargoFeed .dash-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.navbar{
+
+    background:#0b2d4d;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 40px;
+
+}
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+}
+
+.menu{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+.menu a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.menu a:hover{
+
+    color:#ffc107;
+
+}
+/* Navigation */
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#0b2f4f;
+
+    padding:20px 40px;
+
+}
+
+.logo{
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+.logo span{
+
+    margin-left:10px;
+
+}
+
+.menu{
+
+    list-style:none;
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+.menu li{
+
+    display:inline-block;
+
+}
+
+.menu a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.menu a:hover{
+
+    color:#4cc9f0;
+
+}

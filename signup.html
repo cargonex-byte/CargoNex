@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CargoNex Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="auth">
+
+    <h1>Create CargoNex Account</h1>
+
+    <form id="signupForm">
+
+        <input type="text" id="name" placeholder="Full Name" required>
+
+        <input type="email" id="email" placeholder="Email" required>
+
+        <input type="password" id="password" placeholder="Password" required>
+
+        <select id="role">
+            <option>Importer</option>
+            <option>Exporter</option>
+            <option>Clearing Agent</option>
+            <option>Shipper</option>
+            <option>Logistics Company</option>
+        </select>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <p>
+        Already have an account?
+        <a href="login.html">Login</a>
+    </p>
+
+</section>
+
+<script>
+
+document.getElementById("signupForm").addEventListener("submit", async function(e) {
+
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const role = document.getElementById("role").value;
+
+    try {
+
+        const response = await fetch("http://localhost:3000/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name,
+                email,
+                password,
+                role
+            })
+        });
+
+        const data = await response.json();
+
+        alert(data.message);
+
+        window.location.href = "login.html";
+
+    } catch(error) {
+
+        alert("Error connecting to backend");
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

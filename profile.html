@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Profile</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+
+🚢 CargoNex
+
+</div>
+
+<ul class="menu">
+
+<li><a href="dashboard.html">Dashboard</a></li>
+<li><a href="#">Marketplace</a></li>
+<li><a href="messages.html">Messages</a></li>
+<li><a href="profile.html">Profile</a></li>
+<li><a href="login.html">Logout</a></li>
+
+</ul>
+
+</nav>
+
+<section class="dashboard">
+
+<h1>My Business Profile</h1>
+
+<div class="dash-card">
+
+<h2 id="username">User Name</h2>
+
+<p><b>Role:</b> <span id="role"></span></p>
+
+<p><b>Email:</b> <span id="email"></span></p>
+
+<p><b>Company:</b> CargoNex Member</p>
+
+<p id="verifyStatus">
+
+❌ Not Verified
+
+</p>
+
+<button onclick="verifyCompany()">
+
+Request Verification
+
+</button>
+
+</div>
+
+</section>
+
+<script>
+    function verifyCompany(){
+
+const answer = confirm(
+"Submit company for verification?"
+);
+
+if(answer){
+
+document.getElementById("verifyStatus").innerHTML =
+"✅ Verification Request Sent";
+
+alert(
+"Our CargoNex team will review your company."
+);
+
+}
+
+}
+
+document.getElementById("username").innerHTML =
+localStorage.getItem("name");
+
+document.getElementById("email").innerHTML =
+localStorage.getItem("email");
+
+document.getElementById("role").innerHTML =
+localStorage.getItem("role");
+
+</script>
+
+
+</body>
+
+</html>

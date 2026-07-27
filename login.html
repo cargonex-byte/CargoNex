@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CargoNex Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<section class="auth">
+
+    <h1>Login to CargoNex</h1>
+
+    <form id="loginForm">
+
+        <input type="email" id="email" placeholder="Email" required>
+
+        <input type="password" id="password" placeholder="Password" required>
+
+        <button type="submit">Login</button>
+
+    </form>
+    <h2>Marketplace Feed</h2>
+
+<div id="cargoFeed">
+
+</div>
+
+    <p>
+        Don't have an account?
+        <a href="signup.html">Register</a>
+    </p>
+
+    <p>
+        <a href="forgot.html">Forgot Password?</a>
+    </p>
+
+</section>
+
+<script>
+
+document.getElementById("loginForm").addEventListener("submit", async function(e) {
+
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    try {
+
+        const response = await fetch("http://localhost:3000/login", {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                email,
+                password
+            })
+
+        });
+
+        const data = await response.json();
+
+        alert(data.message);
+
+        if(response.ok){
+
+localStorage.setItem("name",data.user.name);
+
+localStorage.setItem("email",data.user.email);
+
+localStorage.setItem("role",data.user.role);
+
+window.location.href="dashboard.html";
+
+}
+
+    } catch(error) {
+
+        alert("Error connecting to backend");
+
+        console.log(error);
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

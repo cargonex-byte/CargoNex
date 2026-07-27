@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CargoNex Messages</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        🚢 CargoNex
+    </div>
+
+    <ul class="menu">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="#">Marketplace</a></li>
+        <li><a href="messages.html">Messages</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="login.html">Logout</a></li>
+    </ul>
+
+</nav>
+
+<section class="dashboard">
+
+    <h1>Business Messages</h1>
+
+    <div class="message-box">
+
+        <h3>China Auto Parts Ltd.</h3>
+
+        <p>Hello, we saw your cargo request.</p>
+
+        <input
+            type="text"
+            id="reply"
+            placeholder="Type your reply..."
+        >
+
+        <button onclick="sendReply()">
+            Send
+        </button>
+
+    </div>
+
+</section>
+
+<script>
+
+function sendReply(){
+
+    const text = document.getElementById("reply").value;
+
+    if(text==""){
+
+        alert("Please type a message.");
+
+        return;
+
+    }
+
+    alert("Message Sent Successfully!");
+
+    document.getElementById("reply").value="";
+
+}
+
+</script>
+
+</body>
+
+</html>

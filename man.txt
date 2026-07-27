@@ -1,0 +1,7 @@
+cd backend
+node server.js
+
+
+
+node server.js
+cd backend

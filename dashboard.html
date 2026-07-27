@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CargoNex Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<nav class="navbar">
+
+    <div class="logo">
+        🚢 <span>CargoNex</span>
+    </div>
+
+    <ul class="menu">
+
+        <li><a href="#">Dashboard</a></li>
+
+        <li><a href="#">Marketplace</a></li>
+
+       <li><a href="messages.html">Messages</a></li>
+
+        <li><a href="profile.html">Profile</a></li>
+
+        <li><a href="login.html">Logout</a></li>
+
+    </ul>
+
+</nav>
+    <section class="dashboard">
+        <div class="user-box">
+            <h2>Welcome Back, User </h2>
+            <p><b>Role:</b> Importer / Exporter</p>            <p><b>Company:</b> Your Company Name</p>
+        </div>
+        <div class="stats">
+            <div class="stat-card">                <h3> Active Shipments</h3>                <p>3</p>            </div>
+            <div class="stat-card">                <h3> Pending Requests</h3>                <p>2</p>            </div>
+            <div class="stat-card">                <h3> Completed</h3>                <p>5</p>            </div>
+        </div>
+        <h2>Quick Actions</h2>
+        <div class="dashboard-grid">
+
+    <div class="dash-card">
+        <h3>Create Shipment</h3>
+        <button>Start</button>
+    </div>
+
+    <div class="dash-card">
+        <h3>Find Agent</h3>
+        <button>Search</button>
+    </div>
+
+    <div class="dash-card">
+        <h3>Track Cargo</h3>
+        <button>Track</button>
+    </div>
+
+    <div class="dash-card">
+        <h3>Settings</h3>
+        <button>Open</button>
+    </div>
+
+</div>
+
+<hr>
+
+<h2>Post Cargo Request</h2>
+
+<form id="cargoForm">
+
+    <input type="text" id="cargoType" placeholder="Cargo Type" required>
+
+    <select id="tradeType">
+        <option>Import</option>
+        <option>Export</option>
+    </select>
+
+    <input type="text" id="origin" placeholder="Origin Country/Port" required>
+
+    <input type="text" id="destination" placeholder="Destination Country/Port" required>
+
+    <textarea id="description" placeholder="Cargo Description"></textarea>
+
+    <button type="submit">Post Request</button>
+
+</form>
+
+<h2>Marketplace Feed</h2>
+
+<div id="cargoFeed">
+
+</div>
+
+</section>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

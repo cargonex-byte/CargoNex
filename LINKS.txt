@@ -1,1 +1,16 @@
 C872EEBD0F8323482C0292F01BDE82CEFEB803CBC0E9E804A3366A161AD1E2A7D26EB06341DA2A82E7D9BDCA24FA9906824A75AB2ABC997616EB0370A417BFF2
+cargonex-byte
+Every time we make progress, you'll save it with just three commands
+git add .
+git commit -m "Describe what you changed"
+git push
+
+For example, after adding a messaging feature:
+git add .
+git commit -m "Added CargoNex messaging system"
+git push
+
+Or after building payments:
+git add .
+git commit -m "Integrated payment gateway"
+git push
